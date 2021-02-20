@@ -12,6 +12,9 @@ for category in listToRender
   if categoryInfo.description
     p
       | #{categoryInfo.description}
+  if category.name = "mica's journal"
+    h4 Trip Reports
+
   .items
     each post in posts
       .item
@@ -20,3 +23,8 @@ for category in listToRender
             span.date #{date(post.date, "YYYY MM DD")}
           span.title
             a(href=url_for(post.path))= post.title
+  if category.name = "mica's journal"
+    h4 Map of SPS I have climbed
+    iframe(src="https://www.peakbagger.com/map/MasterMap.aspx?cy=&cx=&z=&l=GT&t=L&d=5051&sx=&sy=&a=&hj=&minx=-120.689159&miny=35.738269&maxx=-117.997019&maxy=39.910576&c=30263&bl=0&cmt=&cmu=&cyn=&rad=" id="sps-map" title="Mica's SPS Map" width="100%" referrerpolicy="no-referrer" longdesc="if you can't see this, you might need to unblock peakbagger.com in your anti-tracking/ad-blocking browser extensions. don't worry, it's legit."  style="border-style: none; height: 50vw; max-height: 600px;"  )
+    p
+      | (If you can't see the map, you might need to unblock peakbagger.com in your anti-tracking/ad-blocking browser extensions, or see it <a href="https://www.peakbagger.com/List.aspx?lid=5051&cid=30263">here</a>.)

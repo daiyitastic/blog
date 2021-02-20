@@ -9,11 +9,10 @@ block site_body
         .item
           .item-content
             .meta
-              span.date #{date(post.date, "YY MM DD")}
+              span.date #{date(post.date, "YYYY MM DD")}
               != post.location
             h3
               a(href=url_for(post.path))= post.title
-
             .excerpt
               if post.image
                 - var asset = url_for(post.path) + post.image
@@ -22,6 +21,11 @@ block site_body
               if !post.hideSummary
                 p.description 
                   != post.summary
-
+              .categories
+                ul
+                  for category in post.categories.toArray()
+                    li
+                      a(href=url_for(category.path)) #{category.name}
+           
 
   //- include _partial/post/list_pagination

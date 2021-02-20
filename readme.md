@@ -32,3 +32,17 @@ blog is on the internet here: https://daiyi.co/blog
 - alternatively, email the comment https://daiyi.co/#contact
 
 - If you want to edit your comment, make another PR or email me or whatever. it's all cool.
+
+## Write
+
+Create a post:
+
+```
+hexo new post "title"
+```
+
+Local server:
+
+```
+hexo server
+```

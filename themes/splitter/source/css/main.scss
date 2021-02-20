@@ -467,6 +467,13 @@ article {
         img {
           margin-top: -20px;
         }
+
+        .description {
+          margin: 10px 0;
+        }
+        .categories {
+          margin-top: 20px;
+        }
       }
     }
 
@@ -531,7 +538,8 @@ article {
 }
 .nav,
 nav,
-.tags {
+.tags,
+.categories {
   ul {
     display: block;
     padding-left: 0;
